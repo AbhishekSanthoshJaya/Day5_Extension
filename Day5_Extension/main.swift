@@ -18,7 +18,8 @@ extension Double {
     var ft: Double { return self / 3.28084 }
     
     func currency() -> String{
-        let s = String.
+        let s = String.init(format: "$%.2f", self)
+        return s
     }
 }
 
@@ -26,6 +27,7 @@ var meter = 100.0.m;
 print(meter)
 meter = 100.0.km;
 print(meter)
+print(meter.currency())
 
 extension String{
     func Ndisplay(n: Int){
